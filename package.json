@@ -1,5 +1,6 @@
 {
   "name": "uniswap-blocklet",
+  "title": "Uniswap Blocklet",
   "version": "0.0.4",
   "dependencies": {
     "axios": "^0.20.0"
@@ -23,6 +24,7 @@
   "blocklet": {
     "group": "static",
     "color": "secondary",
+    "logo": "logo.png",
     "main": "build",
     "provider": "arcblock",
     "admin_url": "",
