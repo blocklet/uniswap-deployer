@@ -1,7 +1,8 @@
 {
   "name": "uniswap-blocklet",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "dependencies": {
+    "axios": "^0.20.0"
   },
   "scripts": {
     "lint": "eslint src",
@@ -12,6 +13,28 @@
     "start:gatsby": "node tools/create_env.js && gatsby develop --host 0.0.0.0",
     "start:api": "nodemon api/index.js -w api"
   },
-  "devDependencies": {
-  }
+  "publishConfig": {
+    "access": "public",
+    "directory": "_blocklet/"
+  },
+  "files": [
+    "build",
+    "screenshots",
+    "logo.png",
+    "blocklet.md",
+    "blocklet.js",
+    "blocklet.json",
+    "README.md"
+  ],
+  "blocklet": {
+    "group": "static",
+    "color": "secondary",
+    "main": "build",
+    "provider": "arcblock",
+    "admin_url": "",
+    "config_url": "",
+    "public_url": "/"
+  },
+  "devDependencies": {},
+  "license": "Apache-2.0"
 }

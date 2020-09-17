@@ -6,8 +6,9 @@ VERSION=$(strip $(shell cat version))
 
 build: pre-build
 	@echo "Building the software..."
-	@DEBUG=www yarn build
-	@rm public/*.js.map
+	@cd uniswap && yarn build
+	@cd uniswap && mv build ../build
+	@abtnode bundle
 
 init: install dep
 	@echo "Initializing the repo..."
@@ -22,16 +23,14 @@ install:
 
 dep:
 	@echo "Install npm dependencies required for this repo..."
-	@cd uniswap
 	@yarn
+	@cd uniswap && yarn
 
-pre-build: install dep clean prepare
+pre-build: install dep clean
 	@echo "Running scripts before the build..."
 
-post-build:
-	@echo "Running scripts after the build is done..."
 
-all: pre-build build post-build
+all: pre-build build
 
 test:
 	@echo "Running test suites..."
@@ -47,21 +46,11 @@ precommit: dep lint doc build test
 
 travis: precommit
 
-travis-deploy:
-	@echo "Deploy the software by travis"
-	@.makefiles/build.sh
-
 clean:
 	@echo "Cleaning the build..."
-	@rm -rf .cache public src/pages/generated
+	@rm -rf build
 
-prepare:
-	@echo "Prepare the software..."
-	@rm -rf src/pages/generated && mkdir -p $(WHITEPAPER_DIR)
-	@cp -r dependencies/Whitepaper/src/content/latest/images $(WHITEPAPER_DIR)
-	@node tools/merge.js
-
-run: prepare
+run:
 	@echo "Running the software..."
 	@cd uniswap
 	@yarn start
@@ -72,4 +61,4 @@ deploy-aliyun:
 
 include .makefiles/*.mk
 
-.PHONY: build init travis-init install dep pre-build post-build all test doc precommit travis clean watch run bump-version create-pr
+.PHONY: build init travis-init install dep pre-build all test doc precommit travis clean watch run bump-version create-pr
