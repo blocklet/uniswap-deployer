@@ -8,7 +8,6 @@ build: pre-build
 	@echo "Building the software..."
 	@cd uniswap && yarn build
 	@cd uniswap && mv build ../build
-	@abtnode bundle
 
 init: install dep
 	@echo "Initializing the repo..."

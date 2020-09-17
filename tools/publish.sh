@@ -10,6 +10,7 @@ npm install -g @abtnode/cli
 
 echo "publishing uniswap blocklet..."
 make build
+abtnode bundle
 npm publish _blocklet
 
 node tools/post-publish.js
