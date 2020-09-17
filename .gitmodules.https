@@ -1,3 +1,0 @@
-[submodule "uniswap"]
-	path = uniswap
-	url = https://github.com/Uniswap/uniswap-interface.git
