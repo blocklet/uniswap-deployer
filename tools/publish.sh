@@ -10,6 +10,8 @@ npm install -g @abtnode/cli
 
 echo "publishing uniswap blocklet..."
 make build
+rm -f build/static/**/*.js.map
+rm -f build/static/**/*.css.map
 abtnode bundle
 npm publish _blocklet
 
