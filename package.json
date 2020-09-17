@@ -6,12 +6,7 @@
   },
   "scripts": {
     "lint": "eslint src",
-    "clean": "rm -rf public api/dist",
-    "build:api": "NODE_ENV=production netlify-lambda build api/functions",
-    "build:gatsby": "make prepare && node tools/create_env.js && GATSBY_APP_DOMAIN=www.arcblock.io gatsby build",
-    "build": "npm run clean && npm-run-all build:*",
-    "start:gatsby": "node tools/create_env.js && gatsby develop --host 0.0.0.0",
-    "start:api": "nodemon api/index.js -w api"
+    "clean": "rm -rf build"
   },
   "publishConfig": {
     "access": "public",

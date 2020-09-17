@@ -37,7 +37,6 @@ test:
 
 lint:
 	@echo "Linting the software..."
-	@yarn lint
 
 doc:
 	@echo "Building the documenation..."
