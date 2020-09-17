@@ -1,3 +1,8 @@
+## 0.0.4 (September 17, 2020)
+
+- make the license the same as uniswap
+- remove .map files from build
+
 ## 0.0.3 (September 17, 2020)
 
 - try release uniswap blocklet by travis
