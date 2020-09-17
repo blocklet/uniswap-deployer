@@ -1,6 +1,7 @@
 {
   "name": "uniswap-blocklet",
-  "title": "Uniswap Blocklet",
+	"title": "Uniswap Blocklet",
+	"description": "A blocklet for uniswap blocklet",
   "version": "0.0.4",
   "dependencies": {
     "axios": "^0.20.0"
