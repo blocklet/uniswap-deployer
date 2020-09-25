@@ -1,3 +1,6 @@
+## 0.0.7 (September 25, 2020)
+
+
 ## 0.0.6 (September 18, 2020)
 
 - change infura project id to unlimited id
