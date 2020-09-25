@@ -19,7 +19,7 @@ travis-init: install dep
 
 install:
 	@echo "Install software required for this repo..."
-	@git submodule update --init
+	@git submodule update --remote
 	@npm install -g yarn
 
 dep:
