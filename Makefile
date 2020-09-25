@@ -7,7 +7,7 @@ VERSION=$(strip $(shell cat version))
 build: pre-build
 	@echo "Building the software..."
 	@cd uniswap && rm -f .env.production
-	@sed -i -e "s#4bf032f2d38a4ed6bb975b80d6340847#ecc041a3b974472fbf2cf6ed9a2a1d3c#g" uniswap/.env
+	@cd uniswap && sed -i -e "s#4bf032f2d38a4ed6bb975b80d6340847#ecc041a3b974472fbf2cf6ed9a2a1d3c#g" .env
 	@cd uniswap && yarn build
 	@cd uniswap && mv build ../build
 
@@ -20,6 +20,7 @@ travis-init: install dep
 install:
 	@echo "Install software required for this repo..."
 	@git submodule update --init
+	@git submodule update --remote
 	@npm install -g yarn
 
 dep:
