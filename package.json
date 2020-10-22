@@ -1,9 +1,9 @@
 {
   "name": "uniswap-blocklet",
-	"title": "Uniswap Blocklet",
-	"description": "A blocklet for uniswap blocklet",
-	"version": "0.0.8",
-	"keywords": [
+  "title": "Uniswap Blocklet",
+  "description": "A blocklet for uniswap blocklet",
+  "version": "0.0.8",
+  "keywords": [
     "Uniswap",
     "Ethereum"
   ],
