@@ -17,9 +17,7 @@ A blocklet for uniswap. To learn more about Uniswap Please go to https://github.
 yarn global add @abtnode/cli
 git clone git@github.com:blocklet/uniswap-deployer.git
 cd uniswap-deployer
-cp .env.bac .env
-yarn
-yarn build
+make build
 antnode init --mode debug
 abtnode dev
 ```
