@@ -1,17 +1,17 @@
 # Uniswap Blocklet
 
-A blocklet for uniswap. To learn more about Uniswap Please go to https://github.com/Uniswap
+A blocklet for uniswap. To learn more about Uniswap, please go to https://github.com/Uniswap
 
 <!-- ## Feature -->
 
 <!-- ## Install on ABT Node -->
 
-<!-- ## Run and debug in the cloud with Gitpod -->
-<!-- Click the "Open in Gitpod" button, Gitpod will start ABT Node and the blocklet. -->
+## Run and debug in the cloud with Gitpod
+Click the "Open in Gitpod" button, Gitpod will start ABT Node and the blocklet.
 
-<!-- [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/blocklet/uniswap-deployer) -->
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/blocklet/uniswap-deployer)
 
-## Run and debug in local
+## Run and debug locally
 
 ```shell
 yarn global add @abtnode/cli
