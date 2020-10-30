@@ -19,6 +19,7 @@ git clone git@github.com:blocklet/uniswap-deployer.git
 cd uniswap-deployer
 cp .env.bac .env
 yarn
+antnode init --mode debug
 abtnode dev
 ```
 
