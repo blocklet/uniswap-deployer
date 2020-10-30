@@ -18,7 +18,8 @@ yarn global add @abtnode/cli
 git clone git@github.com:blocklet/uniswap-deployer.git
 cd uniswap-deployer
 make build
-antnode init --mode debug
+abtnode init --mode debug
+abtnode start
 abtnode dev
 ```
 
