@@ -23,10 +23,6 @@ abtnode start
 abtnode dev
 ```
 
-## What is ABT Node
-
-[TODO] link to ABT Node Doc Page
-
 ## License
 
 The code is licensed under the MIT license found in the
