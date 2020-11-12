@@ -2,7 +2,7 @@
   "name": "uniswap-blocklet",
   "title": "Uniswap Blocklet",
   "description": "A blocklet for uniswap blocklet",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "keywords": [
     "Uniswap",
     "Ethereum"
@@ -26,16 +26,6 @@
     "blocklet.json",
     "README.md"
   ],
-  "blocklet": {
-    "group": "static",
-    "color": "secondary",
-    "logo": "logo.png",
-    "main": "build",
-    "provider": "arcblock",
-    "admin_url": "",
-    "config_url": "",
-    "public_url": "/"
-  },
   "devDependencies": {},
   "license": "GPL-3.0-or-later"
 }

@@ -1,0 +1,34 @@
+name: Npm deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Deploy:
+
+    runs-on: ubuntu-latest
+
+    if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
+
+    steps:
+
+    - name: Checkout repo
+      uses: actions/checkout@v2
+
+    - name: Init repo
+      run: make github-action-init
+
+    - name: Deploy
+      env:
+        AWS_NODE_ENDPOINT: ${{ secrets.AWS_NODE_ENDPOINT }}
+        AWS_NODE_ACCESS_KEY: ${{ secrets.AWS_NODE_ACCESS_KEY }}
+        AWS_NODE_ACCESS_SECRET: ${{ secrets.AWS_NODE_ACCESS_SECRET }}
+        ALIYUN_NODE_ENDPOINT: ${{ secrets.ALIYUN_NODE_ENDPOINT }}
+        ALIYUN_NODE_ACCESS_SECRET: ${{ secrets.ALIYUN_NODE_ACCESS_SECRET }}
+        ALIYUN_NODE_ACCESS_KEY: ${{ secrets.ALIYUN_NODE_ACCESS_KEY }}
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        GIT_HUB_TOKEN: ${{ secrets.GIT_HUB_TOKEN }}
+      run: bash ./tools/publish.sh
