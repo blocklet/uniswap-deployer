@@ -29,7 +29,7 @@ dep:
 	@yarn
 	@cd uniswap && yarn
 
-pre-build: install dep clean
+pre-build: clean
 	@echo "Running scripts before the build..."
 
 all: pre-build build
