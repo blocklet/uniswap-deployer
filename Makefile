@@ -14,8 +14,9 @@ build: pre-build
 init: install dep
 	@echo "Initializing the repo..."
 
-travis-init: install dep
-	@echo "Initialize software required for travis (normally ubuntu software)"
+github-action-init: dep
+	@echo "Initializing the repo..."
+	@sudo npm install -g @abtnode/cli
 
 install:
 	@echo "Install software required for this repo..."
@@ -44,8 +45,6 @@ doc:
 
 precommit: dep lint doc build test
 
-travis: precommit
-
 clean:
 	@echo "Cleaning the build..."
 	@rm -rf build
@@ -61,4 +60,4 @@ deploy-aliyun:
 
 include .makefiles/*.mk
 
-.PHONY: build init travis-init install dep pre-build all test doc precommit travis clean watch run bump-version create-pr
+.PHONY: build init install dep pre-build all test doc precommit clean watch run bump-version create-pr

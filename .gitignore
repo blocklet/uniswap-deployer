@@ -22,4 +22,4 @@ node_modules
 api/dist
 .env
 /build
-_blocklet
+.blocklet
