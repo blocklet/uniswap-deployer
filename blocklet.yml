@@ -1,20 +1,33 @@
 name: uniswap-blocklet
-description: A blocklet for uniswap blocklet
-group: static
-version: 0.1.0
-main: build
 title: Uniswap Blocklet
-publicUrl: /
-adminUrl: ''
-configUrl: ''
-logo: logo.png
-charging:
-  price: 0
-color: secondary
+description: A blocklet for uniswap blocklet
+version: 0.1.0
 keywords:
   - Uniswap
   - Ethereum
-capabilities:
-  dynamicPathPrefix: true
-specVersion: 1.0.0
+files:
+  - build
+  - screenshots
+  - logo.png
+  - blocklet.md
+  - blocklet.js
+  - README.md
+license: GPL-3.0-or-later
+group: static
+main: build
+logo: logo.png
+specVersion: 1.0.1
 did: z8iZsspkkY4AEXqRj8pAWKafC4KM3zN2WfNGA
+community: ''
+documentation: ''
+homepage: ''
+interfaces:
+  - type: web
+    name: publicUrl
+    path: /
+    prefix: '*'
+    port: BLOCKLET_PORT
+    protocol: tcp
+environments: []
+screenshots: []
+scripts: {}
