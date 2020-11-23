@@ -12,7 +12,7 @@ rm -f build/static/**/*.css.map
 
 echo "publishing uniswap blocklet..."
 npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
-abtnode bundle
+abtnode bundle --create-release
 npm publish .blocklet/bundle
 
 make release
