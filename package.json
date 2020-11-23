@@ -2,7 +2,7 @@
   "name": "uniswap-blocklet",
   "title": "Uniswap Blocklet",
   "description": "A blocklet for uniswap blocklet",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "keywords": [
     "Uniswap",
     "Ethereum"
@@ -23,7 +23,6 @@
     "logo.png",
     "blocklet.md",
     "blocklet.js",
-    "blocklet.json",
     "README.md"
   ],
   "devDependencies": {},

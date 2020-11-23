@@ -54,9 +54,10 @@ run:
 	@cd uniswap
 	@yarn start
 
-deploy-aliyun:
+deploy: build
 	@echo "Deploying to Alibaba Cloud..."
-	@yarn deploy-aliyun
+	@abtnode bundle --create-release
+	@abtnode deploy .blocklet/bundle
 
 include .makefiles/*.mk
 
