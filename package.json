@@ -23,7 +23,6 @@
     "logo.png",
     "blocklet.md",
     "blocklet.js",
-    "blocklet.json",
     "README.md"
   ],
   "devDependencies": {},

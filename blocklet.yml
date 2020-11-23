@@ -13,6 +13,13 @@ keywords:
   - Ethereum
 screenshots: []
 environments: []
+interfaces:
+  - type: web
+    name: publicUrl
+    path: /
+    prefix: '*'
+    port: BLOCKLET_PORT
+    protocol: tcp
 scripts: {}
 specVersion: 1.0.1
 color: primary

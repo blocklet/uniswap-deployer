@@ -56,8 +56,8 @@ run:
 
 deploy: build
 	@echo "Deploying to Alibaba Cloud..."
-	@an bundle --create-release
-	@an deploy .blocklet/bundle
+	@abtnode bundle --create-release
+	@abtnode deploy .blocklet/bundle
 
 include .makefiles/*.mk
 
