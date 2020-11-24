@@ -1,16 +1,24 @@
 name: uniswap-blocklet
-description: A blocklet for uniswap blocklet
-group: static
-version: 0.2.0
-main: build
 title: Uniswap Blocklet
+description: A blocklet for uniswap blocklet
+version: 0.2.1
+keywords:
+  - Uniswap
+  - Ethereum
+files:
+  - build
+  - screenshots
+  - logo.png
+  - blocklet.md
+  - blocklet.js
+  - README.md
+license: GPL-3.0-or-later
+group: static
+main: build
 logo: logo.png
 community: ''
 documentation: ''
 homepage: ''
-keywords:
-  - Uniswap
-  - Ethereum
 screenshots: []
 environments: []
 interfaces:
@@ -22,9 +30,6 @@ interfaces:
     protocol: tcp
 scripts: {}
 specVersion: 1.0.1
-color: primary
-capabilities:
-  dynamicPathPrefix: true
-charging:
-  price: 0
 did: z8iZsspkkY4AEXqRj8pAWKafC4KM3zN2WfNGA
+timeout:
+  start: 10
