@@ -23,7 +23,7 @@ make dep
 make build
 abtnode init --mode debug
 abtnode start
-abtnode dev
+blocklet dev
 ```
 
 ## License

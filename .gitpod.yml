@@ -2,7 +2,7 @@ image:
   file: .gitpod.Dockerfile
 tasks:
   - init: make build && abtnode init -f --mode debug
-    command: abtnode start && abtnode dev
+    command: abtnode start && blocklet dev
 ports:
   - port: 8080
     onOpen: ignore

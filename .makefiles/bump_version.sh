@@ -37,9 +37,6 @@ if [ -f $VERSION ]; then
     echo -e "${NOTICE_FLAG} Will set new version to be ${WHITE}$INPUT_STRING"
     echo $INPUT_STRING > $VERSION
 
-    # tigger change
-    cp $VERSION packages/did-playground/
-
     echo "## $INPUT_STRING ($NOW)\n" > tmpfile
     git log --pretty=format:"- %s" "v$BASE_STRING"...HEAD >> tmpfile
     echo "" >> tmpfile
