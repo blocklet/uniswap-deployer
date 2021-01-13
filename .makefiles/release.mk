@@ -4,8 +4,8 @@ GIT_VERSION="$(strip $(shell git rev-parse --short HEAD))"
 GIT_LOG=$(shell git log `git describe --tags --abbrev=0`..HEAD --pretty="tformat:%h | %s [%an]\n" | sed "s/\"/'/g")
 
 release:
-	@git config --local user.name "wangshijun"
-	@git config --local user.email "wangshijun2010@gmail.com"
+	@git config --local user.name "bot"
+	@git config --local user.email "bot@arcblock.io"
 	@git tag -a $(RELEASE_VERSION) -m "Release $(RELEASE_VERSION). Revision is: $(GIT_VERSION)" | true
 	@git push origin $(RELEASE_VERSION) | true
 

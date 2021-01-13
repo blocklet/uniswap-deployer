@@ -2,9 +2,6 @@ set -e
 VERSION=$(cat version | awk '{$1=$1;print}')
 echo "publish version ${VERSION}"
 
-git config --local user.name "wangshijun"
-git config --local user.email "wangshijun2010@gmail.com"
-
 make build
 rm -f build/static/**/*.js.map
 rm -f build/static/**/*.css.map
@@ -14,6 +11,10 @@ echo "publishing uniswap blocklet..."
 npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
 blocklet bundle --create-release
 npm publish .blocklet/bundle
+
+echo "publishing to blocklet registry"
+blocklet config registry ${BLOCKLET_REGISTRY}
+blocklet publish --developer-sk ${ABTNODE_DEV_SK}
 
 make release
 
@@ -43,7 +44,3 @@ if [ "${AWS_NODE_ENDPOINT}" != "" ]; then
     curl -X POST -H 'Content-type: application/json' --data "{\"text\":\":x: Faild to deploy ${NAME} v${VERSION} to ${AWS_NODE_ENDPOINT}\"}" ${SLACK_WEBHOOK}
   fi
 fi
-
-# trigger ArcBlock/blocklets repo release
-echo "trigger ArcBlock/blocklets repo release"
-.makefiles/trigger_registry_build.sh
