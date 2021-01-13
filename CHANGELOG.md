@@ -1,3 +1,9 @@
+## 0.2.3 (January 13, 2021)
+
+- Merge pull request #4 from blocklet/publish-ci
+- feat: support publish to blocklet registry
+- [skip ci] Update README.md
+
 ## 0.2.2 (January 08, 2021)
 
 - replace abtnode command with blocklet command
