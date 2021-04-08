@@ -1,7 +1,7 @@
 name: uniswap-blocklet
 title: Uniswap Blocklet
 description: A blocklet for uniswap blocklet
-version: 0.2.3
+version: 0.2.4
 keywords:
   - Uniswap
   - Ethereum
@@ -33,3 +33,12 @@ specVersion: 1.0.1
 did: z8iZsspkkY4AEXqRj8pAWKafC4KM3zN2WfNGA
 timeout:
   start: 10
+charging:
+  price: 0
+  tokens: []
+  shares: []
+requirements:
+  abtnode: '>=1.1.0'
+  os: '*'
+  cpu: '*'
+children: []
