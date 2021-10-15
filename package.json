@@ -2,7 +2,7 @@
   "name": "uniswap-blocklet",
   "title": "Uniswap Blocklet",
   "description": "A blocklet for uniswap blocklet",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "keywords": [
     "Uniswap",
     "Ethereum"
@@ -11,7 +11,8 @@
     "axios": "^0.20.0"
   },
   "scripts": {
-    "clean": "rm -rf build"
+    "clean": "rm -rf build",
+    "bundle": "blocklet bundle --create-release"
   },
   "publishConfig": {
     "access": "public",

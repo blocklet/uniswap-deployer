@@ -1,7 +1,7 @@
 name: uniswap-blocklet
 title: Uniswap Blocklet
 description: A blocklet for uniswap blocklet
-version: 0.2.4
+version: 0.2.5
 keywords:
   - Uniswap
   - Ethereum
@@ -29,7 +29,7 @@ interfaces:
     port: BLOCKLET_PORT
     protocol: tcp
 scripts: {}
-specVersion: 1.0.1
+specVersion: 1.1.1
 did: z8iZsspkkY4AEXqRj8pAWKafC4KM3zN2WfNGA
 timeout:
   start: 10
@@ -42,3 +42,4 @@ requirements:
   os: '*'
   cpu: '*'
 children: []
+capabilities: {}

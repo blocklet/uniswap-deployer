@@ -16,13 +16,12 @@ init: install dep
 
 github-action-init: dep
 	@echo "Initializing the repo..."
-	@sudo npm install -g @abtnode/cli
+	@sudo yarn global add @abtnode/cli
 
 install:
 	@echo "Install software required for this repo..."
 	@git submodule update --init
 	@git submodule update --remote
-	@npm install -g yarn
 
 dep:
 	@echo "Install npm dependencies required for this repo..."
