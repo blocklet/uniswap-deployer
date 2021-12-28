@@ -16,7 +16,7 @@ init: install dep
 
 github-action-init: dep
 	@echo "Initializing the repo..."
-	@sudo yarn global add @abtnode/cli
+	@sudo yarn global add @blocklet/cli
 
 install:
 	@echo "Install software required for this repo..."
