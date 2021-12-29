@@ -36,26 +36,26 @@ jobs:
           yarn bundle
 
       - name: Blocklet workflow
-        uses: blocklet/action-workflow@v0.2.2
+        uses: blocklet/action-workflow@v1
         with:
           skip-bundle: true
           skip-upload: false
           skip-deploy: false
-          registry-endpoint: ${{ secrets.BLOCKLET_REGISTRY }}
-          developer-sk: ${{ secrets.ABTNODE_DEV_SK }}
-          abtnode-endpoint: ${{ secrets.AWS_NODE_ENDPOINT }}
-          access-key: ${{ secrets.AWS_NODE_ACCESS_KEY }}
-          access-secret: ${{ secrets.AWS_NODE_ACCESS_SECRET }}
+          store-endpoint: ${{ secrets.STORE_ENDPOINT_PROD }}
+          store-access-token: ${{ secrets.STORE_ACCESS_TOKEN_PROD }}
+          server-endpoint: ${{ secrets.AWS_NODE_ENDPOINT }}
+          server-access-key: ${{ secrets.AWS_NODE_ACCESS_KEY }}
+          server-access-secret: ${{ secrets.AWS_NODE_ACCESS_SECRET }}
           slack-webhook: ${{ secrets.SLACK_WEBHOOK }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy to ALIYUN
-        uses: blocklet/action-workflow@v0.2.2
+        uses: blocklet/action-workflow@v1
         with:
-          skip-abtnode: true
+          skip-deps: true
           skip-bundle: true
           skip-deploy: false
           skip-release: true
-          abtnode-endpoint: ${{ secrets.ALIYUN_NODE_ENDPOINT }}
-          access-key: ${{ secrets.ALIYUN_NODE_ACCESS_KEY }}
-          access-secret: ${{ secrets.ALIYUN_NODE_ACCESS_SECRET }}
+          server-endpoint: ${{ secrets.ALIYUN_NODE_ENDPOINT }}
+          server-access-key: ${{ secrets.ALIYUN_NODE_ACCESS_KEY }}
+          server-access-secret: ${{ secrets.ALIYUN_NODE_ACCESS_SECRET }}
